@@ -1,0 +1,10 @@
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 1em;
+}
