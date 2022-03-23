@@ -1,25 +1,29 @@
-# Alchemy React Base Template
+## KickBall League
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Plan
 
-Use this template for all your "from scratch" deliverables. To start, simply run
+1. Create Router in App.js
+1. Create Nav Bar
+1. Create Home page
+1. Create Teams page
 
-- `npm install`
-- `npm start`
+- Write Fetch tools for Teams getTeams()
+- Get the list of teams displaying without links yet
 
-## Available Scripts
+1. Create Team detail page
 
-In the project directory, you can run:
+- Fetch tool for getting players on given team
+- list the players names without links yet
 
-### `npm start`
+1. Create links to Team detail page from Teams page
+1. Create Players page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- fetch tool for getting players
+- display players on page w/o links
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Create player detail page
 
-### `npm test`
+- fetch tool for getting player's team
+- display player details
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Create links to player details from Players and Team Detail pages
