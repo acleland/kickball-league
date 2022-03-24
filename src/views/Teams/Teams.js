@@ -5,14 +5,18 @@ import { Link } from 'react-router-dom';
 
 export default function Teams() {
   const [teams, setTeams] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const getData = async () => {
       const data = await getTeams();
       setTeams(data);
+      setLoading(false);
     };
     getData();
   }, []);
 
+  if (loading) return <p>Loading...</p>;
   return (
     <div className="teams">
       <h1>Teams</h1>

@@ -16,8 +16,6 @@ export default function PlayerDetail() {
     };
     getData();
   }, [params.id]);
-  console.log('player', player);
-  console.log('player team', player.teams);
 
   if (loading) {
     return <p>Loadin...</p>;
