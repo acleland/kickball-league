@@ -6,8 +6,13 @@ import Players from './views/Players/Players';
 import TeamDetail from './views/TeamDetail/TeamDetail';
 import Nav from './components/Nav/Nav';
 import PlayerDetail from './views/PlayerDetail/PlayerDetail';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    document.title = 'Kickball League';
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>

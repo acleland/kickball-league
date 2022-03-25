@@ -7,13 +7,19 @@ export default function Nav() {
     <nav>
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink className="nav-link" exact to="/">
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/teams">Teams</NavLink>
+          <NavLink className="nav-link" to="/teams">
+            Teams
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/players">Players</NavLink>
+          <NavLink className="nav-link" to="/players">
+            Players
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -28,6 +28,7 @@ export default function TeamDetail() {
       <ul className="player-list">
         {team.players.map((player) => (
           <li key={player.id}>
+            {`${player.position}: `}
             <Link to={`/players/${player.id}`}>{player.name}</Link>
           </li>
         ))}
