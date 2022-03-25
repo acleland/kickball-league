@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './views/Home/Home';
+import Teams from './views/Teams/Teams';
+import Players from './views/Players/Players';
+import TeamDetail from './views/TeamDetail/TeamDetail';
+import Nav from './components/Nav/Nav';
+import PlayerDetail from './views/PlayerDetail/PlayerDetail';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    document.title = 'Kickball League';
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Nav />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/teams">
+            <Teams />
+          </Route>
+          <Route exact path="/players">
+            <Players />
+          </Route>
+          <Route path="/teams/:id">
+            <TeamDetail />
+          </Route>
+          <Route path="/players/:id">
+            <PlayerDetail />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
